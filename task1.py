@@ -5,7 +5,8 @@ def sum_two_numbers(a, b):
 
 n1=int(input("Enter first number: "))
 n2=int(input("Enter second number: "))
-sum=sum_two_numbers(n1, n2)
+total=sum_two_numbers(n1, n2)
+print("Sum:", total)
 
 
 
@@ -20,6 +21,7 @@ def odd_even_checker(num):
 
 num=int(input("Enter a number: "))
 odd_or_even=odd_even_checker(num)
+print(num, "is", odd_or_even)
 
 
 
@@ -28,14 +30,15 @@ odd_or_even=odd_even_checker(num)
 
 #Question 3 (Factorial of a number)
 
-fact=1
 def factorial(num):
+    fact=1
     for i in range(num,1,-1):
         fact*=i
     return fact
 
 n=int(input("Enter a number:"))
 fact=factorial(n)
+print("Factorial:", fact)
 
 
 
@@ -85,7 +88,7 @@ else:
 #Question 7 (Leap year checker)
 
 def leap_year(year):
-    if(year % 4 == 0 and year % 400 ==0):
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
         return True
     else:
         return False
@@ -109,7 +112,7 @@ def armstrong(num):
     sum = 0
     for d in digits:
         sum = sum + int(d) ** n
-        return sum
+    return sum
 
 
 num = int(input("Enter a number: "))
@@ -118,7 +121,4 @@ if check_sum == num:
     print(num, "is an Armstrong number")
 else:
     print(num, "is not an Armstrong number")
-
-
-
     
